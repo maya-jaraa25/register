@@ -46,12 +46,16 @@ function RegisterationForm() {
       clearTimeout(handler);
     };
   }, [confirmPassword, password]);
+  function handleSubmit(formdata) {
+    console.log(formdata);
+    alert("success");
+  }
   return (
     <div className={styles.container}>
       <span className={styles.background}></span>
       <div className={`${styles.formBox} ${styles.register}`}>
         <h2>Sign Up</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className={styles.inputStyle}>
             <input
               type="text"
